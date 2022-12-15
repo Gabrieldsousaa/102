@@ -1,1 +1,36 @@
+# current number insertion sort
 
+A = [8,3,1,4,6,7,8,9,9,11,22,23,34,37,37]
+print(A)
+k = 0
+for i in range (1,len(A)):
+        
+        curNum = A[i]
+        print(f"i é {i}")
+        print(f"Estamos analisando o {curNum}")
+        print("----")
+        
+        for j in range (i,0,-1):
+            print(f"j é {j}")
+            print(f" {curNum} é menor que {A[j-1]} ?")
+            
+            if (curNum < A[j-1]):
+                print(f" {curNum} é sim menor que {A[j-1]}")
+                print(A)
+                A[j] = A[j-1]
+                print(A)
+                print("****")
+                k = j
+            else :
+                
+                print(f" {curNum} não é menor que {A[j-1]}")
+                print(A)
+                print("****")
+                k = j + 1
+                break
+                
+        
+        A[k-1] = curNum
+        print(A)
+        
+print(A)
