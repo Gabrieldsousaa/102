@@ -1,0 +1,41 @@
+#selection sort
+
+
+a = [5,1,8,9,15,7,7,7,7,7,1,1,1,2,3,4,55,5,5,5,6]
+
+print(a)
+for j in range(0,len(a)-1) :
+
+    # print(f"J é {j}")
+    # print(f"-----")
+    min_val = a[j]
+    # print(f"o valor minimo agora é {a[j]}")
+    min_ind = j
+
+    for i in range(j+1,len(a)) :
+
+        if a[i] <= min_val :
+
+            min_val = a[i]
+            min_ind = i
+            # print(f"analisando termo da posição {i}")
+            # print(f"o valor mínimo agora é {min_val} e ocupa a posição {min_ind}")
+            
+            # print(f"************")
+
+        # else :
+            # print(f"analisando termo da posição {i}")
+            # print(f"o valor mínimo continua {min_val} e ocupa a posição {min_ind}")
+            
+            # print(f"************")
+
+    
+
+
+    # print(f"Vamos troca-lo com {a[j]} da a posição {j}")        
+    # print(a)
+    
+    a[j],a[min_ind] = a[min_ind],a[j]
+    # print(a[j],a[min_ind])
+
+print(a)
